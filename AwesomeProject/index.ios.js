@@ -23,6 +23,9 @@ export default class AwesomeProject extends Component {
           To get started, edit index.ios.js
         </Text>
         <Text style={styles.instructions}>
+            OR
+        </Text>
+        <Text style={styles.instructions}>
           Press Cmd+R to reload,{'\n'}
           Cmd+D or shake for dev menu
         </Text>
@@ -40,13 +43,19 @@ const styles = StyleSheet.create({
   },
   welcome: {
     fontSize: 20,
+    fontWeight: 'bold',
     textAlign: 'center',
     margin: 10,
+    padding: 10,
+    borderColor: 'blue',
+    borderWidth: 1,
+    borderRadius: 4,
   },
   instructions: {
     textAlign: 'center',
-    color: '#333333',
+    color: '#000000',
     marginBottom: 5,
+    fontWeight: 'bold',
   },
 });
 
