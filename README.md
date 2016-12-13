@@ -6,6 +6,7 @@
 
 # Basic Syntax
 - Components can be made with certain parameters called ```props```. Which can allow one single component to be used in different places.
+- If using props with their own class, the inline-styling won't work if the prop is inside the component.
 
 # Small Fixes
 - Will need to restart the simulator when adding a new image to a local directory in the project.

@@ -7,6 +7,14 @@
 import React, {Component} from 'react';
 import {AppRegistry, Image, StyleSheet, Text, View} from 'react-native';
 
+class Greetings extends Component {
+    render() {
+        return (
+            <Text>Hi {this.props.name}, nice to meet you.</Text>
+        );
+    }
+}
+
 export default class AwesomeProject extends Component {
     render() {
         return (
@@ -23,9 +31,14 @@ export default class AwesomeProject extends Component {
                 <Text style={styles.instructions}>
                     Press Cmd+R to reload,{'\n'}
                     Cmd+D or shake for dev menu
-                    {"\n"}
+                    {'\n'}
                 </Text>
-                <Image source={require('./img/react-native-congratulations.png')} style={{width: 200, height: 200}}/>
+                <Image source={require('./img/react-native-congratulations.png')} style={{width: 200, height: 200, margin: 10}}/>
+                <Greetings name='Bob' />
+                <Text style={styles.instructions}>
+                    {'\n'}The greeting above does not take {'\n'}
+                    inline-styling since it is a class of it's own.
+                </Text>
             </View>
         );
     }
