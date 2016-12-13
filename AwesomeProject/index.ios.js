@@ -58,7 +58,7 @@ export default class AwesomeProject extends Component {
                 <Greetings name='Bob' />
                 <Text style={styles.instructions}>
                     {'\n'}The greeting above does not take {'\n'}
-                    inline-styling since it is a class of it's own.
+                    inline-styling since it is a component of itself.
                 </Text>
                 <Blinks text="I should be blinking every so often."/>
             </View>
