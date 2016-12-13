@@ -15,6 +15,27 @@ class Greetings extends Component {
     }
 }
 
+class Blinks extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {showText: true};
+
+        //set interval to 2 seconds
+        setInterval(() => {
+            this.setState({
+                showText: !this.state.showText
+            });
+        }, 2000);
+    }
+    render() {
+        //ternary for display
+        let display = this.state.showText ? this.props.text : ' ';
+        return (
+            <Text style={{color: 'red'}}>{display}</Text>
+        );
+    }
+}
+
 export default class AwesomeProject extends Component {
     render() {
         return (
@@ -39,6 +60,7 @@ export default class AwesomeProject extends Component {
                     {'\n'}The greeting above does not take {'\n'}
                     inline-styling since it is a class of it's own.
                 </Text>
+                <Blinks text="I should be blinking every so often."/>
             </View>
         );
     }
