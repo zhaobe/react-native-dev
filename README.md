@@ -16,5 +16,9 @@
 ## For later development
 - Can use Redux for later on setting state instead of calling ```setState```.
 
+## Links for reference
+- [For troubleshooting](https://facebook.github.io/react-native/docs/troubleshooting.html)
+- [ES6 setState mounting error](http://jaketrent.com/post/set-state-in-callbacks-in-react/)
+
 ## Issues
 - Need to find a fix for ```setState```, mounting or unmount ```Blinks``` component
