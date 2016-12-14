@@ -1,6 +1,7 @@
 # Getting Started with React Native
 
-- Downloaded the react-native 0.38.0 version with ```react-native init AwesomeProject --version 0.38.0```
+- Downloaded the react-native 0.38.0 version with ```react-native init AwesomeProject --version 0.38.0```.
+- Can either run from launching XCode or with ```react-native run-ios``` command.
 - To run, open AwesomeProject.xcodeproj in XCode and run ios simulator to render app. Had to comment out line 26-27 in React > Base > RCTPlatform.c > interfaceIdiom(), since there was a build fail for the UIUserInterfaceIdiomCarPlay.
 - Had to clear cache with ```npm start -- --reset-cache``` in order to get the ios simulator to be error-free.
 
@@ -14,3 +15,6 @@
 
 ## For later development
 - Can use Redux for later on setting state instead of calling ```setState```.
+
+## Issues
+- Need to find a fix for ```setState```, mounting or unmount ```Blinks``` component

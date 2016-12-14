@@ -14,7 +14,8 @@ class Greetings extends Component {
         );
     }
 }
-
+//need to find a way to check componenet mounting for setState,
+//ES6 took away isMounted() method
 class Blinks extends Component {
     constructor(props) {
         super(props);
@@ -35,11 +36,20 @@ class Blinks extends Component {
         );
     }
 }
+//ios simulator not working properly with component below, will need to fix
+class UsingFlex extends Component {
+    render() {
+        return (
+            <View style={{width: 10, height: 10, backgroundColor: 'steelblue'}} />
+        );
+    }
+}
 
-export default class AwesomeProject extends Component {
+class AwesomeProject extends Component {
     render() {
         return (
             <View style={styles.container}>
+            <UsingFlex/>
                 <Text style={styles.welcome}>
                     Welcome to React Native!
                 </Text>
@@ -71,7 +81,8 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#F5FCFF'
+        // backgroundColor: '#F5FCFF'
+        backgroundColor: 'skyblue'
     },
     welcome: {
         fontSize: 20,
