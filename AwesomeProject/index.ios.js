@@ -5,12 +5,12 @@
  */
 
 import React, {Component} from 'react';
-import {AppRegistry, Image, StyleSheet, Text, View} from 'react-native';
+import {AppRegistry, Image, ScrollView, StyleSheet, Text, View} from 'react-native';
 
 class Greetings extends Component {
     render() {
         return (
-            <Text>Hi {this.props.name}, nice to meet you.</Text>
+            <Text style={styles.greetings}>Hi {this.props.name}, nice to meet you.</Text>
         );
     }
 }
@@ -32,7 +32,7 @@ class Blinks extends Component {
         //ternary for display
         let display = this.state.showText ? this.props.text : ' ';
         return (
-            <Text style={{color: 'red'}}>{display}</Text>
+            <Text style={styles.blinks}>{display}</Text>
         );
     }
 }
@@ -48,7 +48,7 @@ class UsingFlex extends Component {
 class AwesomeProject extends Component {
     render() {
         return (
-            <View style={styles.container}>
+            <ScrollView style={{backgroundColor:'powderblue'}}>
             <UsingFlex/>
                 <Text style={styles.welcome}>
                     Welcome to React Native!
@@ -71,7 +71,7 @@ class AwesomeProject extends Component {
                     inline-styling since it is a component of itself.
                 </Text>
                 <Blinks text="I should be blinking every so often."/>
-            </View>
+            </ScrollView>
         );
     }
 }
@@ -100,6 +100,14 @@ const styles = StyleSheet.create({
         marginBottom: 5,
         fontWeight: 'bold'
     },
+    greetings: {
+        textAlign: 'center',
+    },
+    blinks: {
+        textAlign: 'center',
+        color: 'red',
+        padding: 10
+    }
 });
 
 AppRegistry.registerComponent('AwesomeProject', () => AwesomeProject);
