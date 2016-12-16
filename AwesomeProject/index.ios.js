@@ -37,6 +37,7 @@ class Blinks extends Component {
     }
 }
 //ios simulator not working properly with component below, will need to fix
+//TODO: need to fix and integrate into main ScrollView
 class UsingFlex extends Component {
     render() {
         return (
@@ -49,7 +50,6 @@ class AwesomeProject extends Component {
     render() {
         return (
             <ScrollView style={{backgroundColor:'powderblue'}}>
-            <UsingFlex/>
                 <Text style={styles.welcome}>
                     Welcome to React Native!
                 </Text>
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         // backgroundColor: '#F5FCFF'
-        backgroundColor: 'skyblue'
+        backgroundColor: 'skyblue',
     },
     welcome: {
         fontSize: 20,
@@ -92,7 +92,8 @@ const styles = StyleSheet.create({
         padding: 10,
         borderColor: 'blue',
         borderWidth: 1,
-        borderRadius: 4
+        borderRadius: 4,
+        marginTop: 30
     },
     instructions: {
         textAlign: 'center',
@@ -107,7 +108,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         color: 'red',
         padding: 10
-    }
+    },
 });
 
 AppRegistry.registerComponent('AwesomeProject', () => AwesomeProject);
