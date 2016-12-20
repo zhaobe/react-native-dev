@@ -49,7 +49,7 @@ class UsingFlex extends Component {
 class AwesomeProject extends Component {
     render() {
         return (
-            <ScrollView style={{backgroundColor:'powderblue'}}>
+            <ScrollView contentContainerStyle={styles.contentContainer}>
                 <Text style={styles.welcome}>
                     Welcome to React Native!
                 </Text>
@@ -77,7 +77,7 @@ class AwesomeProject extends Component {
 }
 
 const styles = StyleSheet.create({
-    container: {
+    contentContainer: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',

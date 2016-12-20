@@ -9,6 +9,7 @@
 - Components can be made with certain parameters called ```props```. Which can allow one single component to be used in different places.
 - If using props with their own class, the inline-styling won't work if the prop is inside the component. But if the styling is in the component itself then it passes to main view component (e.g. in the Greetings component).
 - May add inline-styling if rendering within own component refer to ```class Blinks extends Component```.
+- When using `<ScrollView>` you will use the contentContainerStyle prop.
 
 ## Small Fixes
 - Will need to restart the simulator when adding a new image to a local directory in the project.
