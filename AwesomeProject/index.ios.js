@@ -71,6 +71,14 @@ class AwesomeProject extends Component {
                     inline-styling since it is a component of itself.
                 </Text>
                 <Blinks text="I should be blinking every so often."/>
+                <Text style={{fontSize:50}}>
+                Loren ipsum text for testing {'\n'}
+                Loren ipsum text for testing {'\n'}
+                Loren ipsum text for testing {'\n'}
+                Loren ipsum text for testing {'\n'}
+                Loren ipsum text for testing {'\n'}
+                Loren ipsum text for testing {'\n'}
+                </Text>
             </ScrollView>
         );
     }
@@ -78,10 +86,8 @@ class AwesomeProject extends Component {
 
 const styles = StyleSheet.create({
     contentContainer: {
-        flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        // backgroundColor: '#F5FCFF'
         backgroundColor: 'skyblue',
     },
     welcome: {

@@ -10,6 +10,7 @@
 - If using props with their own class, the inline-styling won't work if the prop is inside the component. But if the styling is in the component itself then it passes to main view component (e.g. in the Greetings component).
 - May add inline-styling if rendering within own component refer to ```class Blinks extends Component```.
 - When using `<ScrollView>` you will use the contentContainerStyle prop.
+- When using `<ScrollView>`, do not use flex: 1 for the styling.
 
 ## Small Fixes
 - Will need to restart the simulator when adding a new image to a local directory in the project.
