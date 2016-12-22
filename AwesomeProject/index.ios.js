@@ -5,9 +5,7 @@
  */
 
 import React, {Component} from 'react';
-import {AppRegistry, Image, Navigator, ScrollView, StyleSheet, Text, View} from 'react-native';
-
-import FirstScene from './FirstScene';
+import {AppRegistry, Image, ScrollView, StyleSheet, Text, View} from 'react-native';
 
 class Greetings extends Component {
     render() {
@@ -51,28 +49,37 @@ class UsingFlex extends Component {
 class AwesomeProject extends Component {
     render() {
         return (
-            <Navigator
-                initialRoute={{title: 'My First Scene', index: 0 }}
-                renderScene={{route, navigator}} =>
-                <FirstScene
-                    title={route.title}
-
-                    onForward={() => {
-                        const nextIdx = route.index + 1;
-                        navigator.push({
-                            title: 'Scene' + nextIdx,
-                            index: nextIdx,
-                        });
-                    }}
-
-                    onBack={() => {
-                        if(route.index > 0) {
-                            navigator.pop();
-                        }
-                    }}
-                />
-                
-            />
+            <ScrollView contentContainerStyle={styles.contentContainer}>
+                <Text style={styles.welcome}>
+                    Welcome to React Native!
+                </Text>
+                <Text style={styles.instructions}>
+                    To get started, edit index.ios.js
+                </Text>
+                <Text style={styles.instructions}>
+                    OR
+                </Text>
+                <Text style={styles.instructions}>
+                    Press Cmd+R to reload,{'\n'}
+                    Cmd+D or shake for dev menu
+                    {'\n'}
+                </Text>
+                <Image source={require('./img/react-native-congratulations.png')} style={{width: 200, height: 200, margin: 10}}/>
+                <Greetings name='Bob' />
+                <Text style={styles.instructions}>
+                    {'\n'}The greeting above does not take {'\n'}
+                    inline-styling since it is a component of itself.
+                </Text>
+                <Blinks text="I should be blinking every so often."/>
+                <Text style={{fontSize:50}}>
+                Loren ipsum text for testing {'\n'}
+                Loren ipsum text for testing {'\n'}
+                Loren ipsum text for testing {'\n'}
+                Loren ipsum text for testing {'\n'}
+                Loren ipsum text for testing {'\n'}
+                Loren ipsum text for testing {'\n'}
+                </Text>
+            </ScrollView>
         );
     }
 }
